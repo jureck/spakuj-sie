@@ -89,25 +89,33 @@ body {
 
 .pack__lesson {
     padding: 20px;
-    background-color: rgb(66, 196, 77);
+    border: 5px solid rgb(66, 196, 77);
     font-weight: bold;
-    font-size: 24px;
+    font-size: 25px;
     border-radius: 10px;
-    color: black;
+    color:  rgb(66, 196, 77);
     margin: 4px;
     text-decoration: none;
+    transition: all .2s ease-in-out;
 }
 
-.pack__lesson.line, .unpack__lesson.line {
-    text-decoration: line-through;
+.pack__lesson.done  {
+    background-color: rgb(66, 196, 77);
+    color: black;
+}
+
+.unpack__lesson.done {
+    background-color: rgb(196, 66, 66);
+    color: black;
 }
 
 .unpack__lesson {
     padding: 20px;
-    background-color: rgb(196, 66, 66);
+    border: 5px solid rgb(196, 66, 66);
     font-weight: bold;
-    font-size: 24px;
+    font-size: 25px;
     border-radius: 10px;
-    color: black;
+    color: rgb(196, 66, 66);
     margin: 4px;
+    transition: all .2s ease-in-out;
 }

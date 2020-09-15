@@ -74,15 +74,9 @@ const saveLessons = () => {
     document.querySelector('.lessons__form').style.display = "none";
 }
 
-const toggleUnpackText = (id) => {
-    document.querySelector(`#u${id}`).classList.toggle('line');
+const toggleDoneText = (e) => {
+    e.target.classList.toggle('done');
 }
-
-
-const togglePackText = (id) => {
-    document.querySelector(`#p${id}`).classList.toggle('line');
-}
-
 
 if(localStorage.getItem('mon')) {
     document.querySelector('.lessons__form').style.display = "none";
@@ -106,9 +100,9 @@ if(curr === "piątek" || curr === "sobota" || curr === "niedziela") next = "poni
 document.querySelector('.current').innerHTML += "<span class='pack__day'>"+curr+"</span>";
 document.querySelector('.next').innerHTML += "<span class='pack__day'>"+next+"</span>";
 
-document.querySelector('.unpack').innerHTML = toUnPack.map((el, q) => '<p id="u'+q+'" onclick="toggleUnpackText('+q+')" class="unpack__lesson">'+el+'</p>');
+document.querySelector('.unpack').innerHTML = toUnPack.map((el, q) => '<p id="u'+q+'" onclick="toggleDoneText(event)" class="unpack__lesson">'+el+'</p>');
 
-document.querySelector('.pack').innerHTML = toPack.map((el, q) => '<p id="p'+q+'" onclick="togglePackText('+q+')" class="pack__lesson">'+el+'</p>');
+document.querySelector('.pack').innerHTML = toPack.map((el, q) => '<p id="p'+q+'" onclick="toggleDoneText(event)" class="pack__lesson">'+el+'</p>');
 
 change.addEventListener('click', () => document.querySelector('.lessons__form').style.display = "block");
 save.addEventListener('click', saveLessons);
