@@ -61,6 +61,10 @@ body {
     font-weight: bold;
 }
 
+.next {
+    margin-bottom: 60px;
+}
+
 .pack__day {
     background-color: rgb(0, 0, 0);
     padding: 5px;
@@ -71,12 +75,21 @@ body {
     text-align: center;
 }
 
+.pack {
+    margin-bottom: 40px;
+}
+
 .unpack__title {
     text-align: center;
     font-size: 28px;
     font-weight: bold;
     color: rgb(196, 66, 66);
     margin-bottom: 0px;
+    padding: 10px;
+    background-color: #3a2929;
+    display: block;
+    width: 45%;
+    margin: auto;
 }
 
 .pack__title {
@@ -85,6 +98,11 @@ body {
     font-weight: bold;
     color: rgb(66, 196, 77);
     margin-bottom: 0px;
+    padding: 10px;
+    background-color:#212b1d;
+    display: block;
+    width: 45%;
+    margin: 40px auto 0px auto;
 }
 
 .pack__lesson {
@@ -97,6 +115,8 @@ body {
     margin: 4px;
     text-decoration: none;
     transition: all .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .pack__lesson.done  {
@@ -118,4 +138,6 @@ body {
     color: rgb(196, 66, 66);
     margin: 4px;
     transition: all .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
 }
